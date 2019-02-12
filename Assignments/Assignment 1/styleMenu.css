@@ -1,0 +1,22 @@
+RESTAURANT{width:500px; text-align:center; margin:auto;}
+RESTAURANT info name{display:block; color:maroon; font-size:36pt; font-weight:bold; font-family: "Comic Sans MS", cursive, sans-serif;}
+RESTAURANT info address{display:block; color:maroon; font-size:18pt;}
+RESTAURANT info phone{display:block; color:maroon; font-size:18pt;}
+MENU{display:block; padding: 0 0 60px 0; text-align:left;}
+MENU title{font-size: 26px;
+	display: block;
+	font-weight: 500;
+	color: #444;
+	margin: 20px 0;
+	text-align: center;}
+MENU name {font-weight: 600;
+	font-size: 17px;
+	color: #555;
+	border-bottom: 2px dotted rgb(213, 213, 213);}
+MENU price{float: right;
+	font-weight: 600;
+	color: #555;}
+MENU item{display:block; margin: 0 5px 10px;}
+MENU desc {display:block; font-style: italic;
+	font-size: 15px;}
+

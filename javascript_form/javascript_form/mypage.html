@@ -1,0 +1,69 @@
+
+<html>
+
+    <head>
+    
+        <script>
+            function readForm(){
+                
+                var firstN = document.getElementById("fname").value
+                
+                var rdio= document.getElementsByName("city");
+                var storerad = "";
+                for(var i = 0; i<rdio.length; i++){
+                    if(rdio[i].checked== true)
+                        storerad = rdio[i].value;
+                }
+                
+                
+                var chekbox = document.getElementsByName("car");
+                var storeval = "";
+                for(var i = 0; i<chekbox.length; i++){
+                    if(chekbox[i].checked== true)
+                        storeval += chekbox[i].value + "\n\r";
+                }
+                
+                alert(storeval);
+            }
+        </script>
+    </head>
+    
+    <body>
+        
+        <form method="POST">
+            <table border='1'>
+                <tr>
+                    <th>First Name:</th>
+                    <td><input type="textbox" id="fname"    required /></td>
+                </tr>
+                
+                <tr>
+                    <th>Place:</th>
+                    <td><input type="radio" name="city" value="Toronto" />Toronto<br/>
+                          <input type="radio" name="city" value="Winnipeg" />Winnipeg<br />
+                          <input type="radio" name="city" value="Calgary" />Calgary<br />
+                </td>
+                </tr>
+                <tr>
+                    <th>Cars</th>
+                    <td><input type="checkbox" name="car" value="Benz" />Benz<br/>
+                          <input type="checkbox" name="car" value="BMW" />BMW<br />
+                          <input type="checkbox" name="car" value="Lotus" />Lotus<br />
+                </td>
+                </tr>
+                <tr>    
+                    <td colspan='2'>
+                        <button id='submit' onclick="readForm()">Submit</button>
+                    </td>
+                
+                </tr>
+            </table>
+        
+        </form>
+    
+    </body>
+
+
+
+
+</html>

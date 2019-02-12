@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "singer.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+    var x, newatt, xmlDoc;
+    xmlDoc = xml.responseXML;
+    newatt = xmlDoc.createAttribute("edition");
+    newatt.nodeValue = "first";
+    x = xmlDoc.getElementsByTagName("title");
+    x[0].setAttributeNode(newatt);
+    document.getElementById("demo").innerHTML =
+    "Edition: " + x[0].getAttribute("edition");
+}
+</script>
+
+</body>
+</html>

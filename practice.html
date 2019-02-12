@@ -1,0 +1,22 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+		var myName = "Adel";
+		var myInt = 0;
+		var myDouble = 0.0;
+		function myFunction(){
+			myName = document.getElementById('txt1').value;
+			if(!isNaN(myName)) document.getElementById('p1').innerHTML = "This is a number.";
+			else	document.getElementById('p1').innerHTML = "This is not a number.";
+		}
+	</script>
+</head>
+
+<body>
+	<input type="text" id="txt1"></input>
+	<button id="btn1" onclick="myFunction();">Button</button>
+	<p id="p1"></p>
+</body>
+
+</html>

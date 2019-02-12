@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<title>Auto Mobiles</title>
+</head>
+
+<body>
+<p id="display"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.open("GET","automobile.xml", true);
+xhttp.send();
+xhttp.onreadystatechange = function(){
+	if(this.readyState == 4 && this.status == 200){
+		myFunction(this);	
+	}
+};
+
+function myFunction(){
+	var i, txt, p;
+	var xmlDoc = xhttp.responseXML;
+	var make, model, year, km, price;	
+	make = xmlDoc.getElementsByTagName("make");
+	model = xmlDoc.getElementsByTagName("model");
+	year = xmlDoc.getElementsByTagName("year");
+	km = xmlDoc.getElementsByTagName("km");
+	price = xmlDoc.getElementsByTagName("price");
+	txt = "<table class='table' id='myTable'><thead class='thead-dark'><tr><th scope='col'>Manufacturer</th><th scope='col'>Model</th><th scope='col'>Year</th><th scope='col'>KM</th><th scope='col'>Price</th><th scope='col'>Action</th></tr></thead>";
+	for(i = 0; i < make.length; i++){
+		var makeName = make[i].childNodes[0].nodeValue;
+		var modelName = model[i].childNodes[0].nodeValue;
+		var yearName = year[i].childNodes[0].nodeValue;
+		var kmName = km[i].childNodes[0].nodeValue;
+		var priceName = price[i].childNodes[0].nodeValue;
+
+		txt += "<tbody><tr id="+i+"><td>" + makeName + "</td>";
+		txt += "<td>" + modelName + "</td>";	
+		txt += "<td>" + yearName + "</td>";	
+		txt += "<td>" + kmName + "</td>";	
+		txt += "<td>" + priceName + "</td>";	
+		txt += "<td><button type='button' class='btn btn-warning' onclick='onEdit("+i+")'>Edit</button>&nbsp<button type='button' class='btn btn-danger' onclick='onDelete("+i+")'>Delete</button></td>"
+		txt += "</tr>";
+	}
+	txt += "</tbody></table>";
+	document.getElementById("display").innerHTML = txt;
+}
+
+function onEdit(i){
+	var xmlDoc = xhttp.responseXML;
+	var make, model, year, km, price;	
+	make = xmlDoc.getElementsByTagName("make");
+	model = xmlDoc.getElementsByTagName("model");
+	year = xmlDoc.getElementsByTagName("year");
+	km = xmlDoc.getElementsByTagName("km");
+	price = xmlDoc.getElementsByTagName("price");
+	
+	var makeName = make[i].childNodes[0].nodeValue;
+	var modelName = model[i].childNodes[0].nodeValue;
+	var yearName = year[i].childNodes[0].nodeValue;
+	var kmName = km[i].childNodes[0].nodeValue;
+	var priceName = price[i].childNodes[0].nodeValue;
+	
+	var table = document.getElementById("myTable");
+	var currentRow = table.rows[i+1];
+	currentRow.cells[0].innerHTML = "<input type='text' value='"+makeName+"'>";
+	currentRow.cells[1].innerHTML = "<input type='text' value='"+modelName+"'>";
+	currentRow.cells[2].innerHTML = "<input type='text' value='"+yearName+"'>";
+	currentRow.cells[3].innerHTML = "<input type='text' value='"+kmName+"'>";
+	currentRow.cells[4].innerHTML = "<input type='text' value='"+priceName+"'>";
+	currentRow.cells[5].innerHTML = "<button type='button' class='btn btn-outline-success'>Confirm</button>&nbsp<button type='button' class='btn btn-outline-danger' onclick='onCancel("+i+")'>Cancel</button>"
+}
+
+function onCancel(i){
+	var xmlDoc = xhttp.responseXML;
+	var make, model, year, km, price;	
+	make = xmlDoc.getElementsByTagName("make");
+	model = xmlDoc.getElementsByTagName("model");
+	year = xmlDoc.getElementsByTagName("year");
+	km = xmlDoc.getElementsByTagName("km");
+	price = xmlDoc.getElementsByTagName("price");
+	
+	var makeName = make[i].childNodes[0].nodeValue;
+	var modelName = model[i].childNodes[0].nodeValue;
+	var yearName = year[i].childNodes[0].nodeValue;
+	var kmName = km[i].childNodes[0].nodeValue;
+	var priceName = price[i].childNodes[0].nodeValue;
+	
+	var table = document.getElementById("myTable");
+	var currentRow = table.rows[i+1];
+	currentRow.cells[0].innerHTML = makeName;
+	currentRow.cells[1].innerHTML = modelName;
+	currentRow.cells[2].innerHTML = yearName;
+	currentRow.cells[3].innerHTML = kmName;
+	currentRow.cells[4].innerHTML = priceName;
+	currentRow.cells[5].innerHTML = "<button type='button' class='btn btn-warning' onclick='onEdit("+i+")'>Edit</button>&nbsp<button type='button' class='btn btn-danger'>Delete</button>"
+}
+
+function onDelete(i){
+	var table = document.getElementById("myTable");
+	table.deleteRow(i+1);
+	myFunction(this);
+}
+</script>
+</body>
+</html>

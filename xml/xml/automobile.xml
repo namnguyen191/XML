@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="choose.xsl"?>
+<auto>
+	<car>
+		<make>Audi</make>
+		<model>R8</model>
+		<year>2019</year>
+		<speed>330 km/h</speed>
+		<price>214900</price>
+	</car>
+
+	<car>
+		<make>Mercedes</make>
+		<model>GTR</model>
+		<year>2018</year>
+		<speed>290 km/h</speed>
+		<price>200000</price>
+	</car>
+
+	<car>
+		<make>BMW</make>
+		<model>M4</model>
+		<year>2017</year>
+		<speed>300 km/h</speed>
+		<price>98000</price>
+	</car>
+
+	<car>
+		<make>Lamborghini</make>
+		<model>Huracan</model>
+		<year>2016</year>
+		<speed>330 km/h</speed>
+		<price>350000</price>
+	</car>
+
+	<car>
+		<make>Ferrari</make>
+		<model>488 GTB</model>
+		<year>2016</year>
+		<speed>330 km/h</speed>
+		<price>389800</price>
+	</car>
+
+	<car>
+		<make>Toyota</make>
+		<model>C-HR</model>
+		<year>2019</year>
+		<speed>190 km/h</speed>
+		<price>23675</price>
+	</car>
+
+	<car>
+		<make>Hyundai</make>
+		<model>Veloster</model>
+		<year>2019</year>
+		<speed>275 km/h</speed>
+		<price>20999</price>
+	</car>
+
+	<car>
+		<make>Honda</make>
+		<model>Civic Sedan</model>
+		<year>2018</year>
+		<speed>280 km/h</speed>
+		<price>17790</price>
+	</car>
+
+	<car>
+		<make>Accura</make>
+		<model>NSZ</model>
+		<year>2018</year>
+		<speed>307 km/h</speed>
+		<price>192895</price>
+	</car>
+
+	<car>
+		<make>Porsche</make>
+		<model>Panamera</model>
+		<year>2019</year>
+		<speed>264 km/h</speed>
+		<price>98300</price>
+	</car>
+</auto>

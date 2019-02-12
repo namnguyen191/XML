@@ -1,0 +1,53 @@
+<html>
+
+	<head>
+
+		<script type="text/javascript">
+			  
+            function getCal(){
+                
+                var input = document.getElementById("num").value;
+                var output = document.getElementById("output");
+                if(isNaN(parseInt(input))){
+                    alert("Not a number");
+                }else{
+                    var startpoint = parseInt(input);
+                     
+                    var endpoint = 0;
+                    for(var i = startpoint; i < (startpoint+5); i++){
+                        
+                        output.innerHTML += i + "<br />"; 
+                        endpoint = i; 
+                    }
+                    
+                    var whileendpoint = (endpoint + 5);
+                    while(endpoint < whileendpoint){
+                        output.innerHTML += endpoint + "<br />";
+                        endpoint= endpoint + 1; 
+                    }
+                    
+                    var doendpoint= endpoint + 5; 
+                    do{
+                        output.innerHTML += endpoint + "<br />";
+                        endpoint = endpoint + 1; 
+                        
+                    }while(endpoint < doendpoint)
+                    
+                    
+                    
+                }
+                
+            }
+            
+		</script>
+	</head>
+	
+	<body>
+		Enter Number: <input type="text" id="num" /><br />
+        <button id="submit" onclick="getCal()">Submit</button><br />
+        
+		<p id="output"></p><br />
+	</body>
+
+
+</html>

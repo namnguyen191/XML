@@ -1,0 +1,32 @@
+<html>
+
+<body>
+
+<p id="demo"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.open("GET","book.xml", true);
+xhttp.send();
+xhttp.onreadystatechange = function(){
+	if(this.readyState == 4 && this.status == 200){
+		myFunction(this);	
+	}
+};
+
+function myFunction(){
+	var xmlDoc = xhttp.responseXML;
+	var x, y, i, txt, p;
+	txt = "<table border='1'><tr><th>Book Name</th><th>Price</th></tr>";
+	x = xmlDoc.getElementsByTagName("title");
+	y = xmlDoc.getElementsByTagName("price");
+	for(i = 0; i < x.length; i++){
+		txt += "<tr><td>" + x[i].childNodes[0].nodeValue + "</td><td>" + y[i].childNodes[0].nodeValue + "</td></tr>";	
+	}
+	txt += "</table>";
+	document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>

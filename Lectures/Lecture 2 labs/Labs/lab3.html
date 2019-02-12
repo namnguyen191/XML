@@ -1,0 +1,30 @@
+<html>
+
+	<head>
+        
+		<script type="text/javascript">
+			function gettest(){
+				var input = document.getElementById("test").value; 
+				var out = document.getElementById("output"); 
+				 
+				if(isNaN(parseInt(input))){
+					
+					out.innerHTML = "Please insert a number";
+				
+				}else{
+					out.innerHTML = "Number is added"; 
+				}
+			
+			}
+		</script>
+	</head>
+	
+	<body>
+		
+		<input type="text" id="test" /><br />
+		<button onclick="gettest()">Submit</button><Br />
+		<p id="output"></p><br />
+	</body>
+
+
+</html>

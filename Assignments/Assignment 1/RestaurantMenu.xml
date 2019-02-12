@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="styleMenu.css" ?>
+<RESTAURANT>
+	<info>
+		<name>Food House</name>
+		<address>123 Andy Crescent, Vaughan</address>
+		<phone>123-456-7890</phone>
+	</info>
+	<MENU>
+		<beverages>
+			<title>Beverages</title>
+			<item id="1">
+				<name>Coke</name>
+				<price>1.00$</price>
+				<desc />
+			</item>
+			<item id="2">
+				<name>Tea</name>
+				<price>1.00$</price>
+				<desc />
+			</item>
+		</beverages>
+		<apappetizers>
+			<title>Apappetizers</title>
+			<item id="01">
+				<name>Calamari</name>
+				<price>5.00$</price>
+				<desc>Tender calamari, lightly breaded and fried. Served with marinara sauce and creamy ranch.</desc>
+			</item>
+			<item id="02">
+				<name>Soupe &#0224; l'oignon</name>
+				<price>3.00$</price>
+				<desc>A rich and hearty broth stocked full with onions topped with seasoned croutons and melted Swiss cheese. Served in a crock.</desc>
+			</item>
+		</apappetizers>
+		<main_courses>
+			<title>Main Courses</title>
+			<item id="001">
+				<name>Beef Wellington</name>
+				<price>35.00$</price>
+				<desc>Tender, flavorful beef encased in earthy mushrooms, rich pâte, and a flaky pastry</desc>
+			</item>
+			<item id="002">
+				<name>Ramen</name>
+				<price>20.00$</price>
+				<desc>Japanese noodle soup consists of Chinese-style wheat noodles served in a meat- or fish-based broth, flavored with miso, top with sliced pork ,dried seaweed, kamaboko, green onions and corn.</desc>
+			</item>
+		</main_courses>
+		<desserts>
+			<title>Desserts</title>
+			<item id="0001">
+				<name>Belgian Waffles</name>
+				<price>8.00$</price>
+				<desc>Plain Belgian waffles, sprinkled with a mixture of cinnamon &amp; sugar</desc>
+			</item>
+			<item id="0002">
+				<name>Bubble Tea</name>
+				<price>3.00$</price>
+				<desc>Flavor options: Chocolate, Coconut, Green Tea.</desc>
+			</item>
+		</desserts>
+	</MENU>
+</RESTAURANT>

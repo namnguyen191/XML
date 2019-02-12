@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script type='text/javascript'>
+			
+			function test1(){
+				
+				var p = document.querySelectorAll("p");
+				var i = 10; 
+				p[0].style.fontSize="20px";
+				for(var x = 0; x < i; x++){
+					p[0].innerHTML += x + "<Br />";
+					
+				}
+				
+				var y = 100; 
+				
+				while(y < 110){
+					p[1].innerHTML += y + "<Br />"; 
+					y++; 
+				}
+				
+				var w = 150; 
+				
+				do{
+				
+					p[2].innerHTML += w + "<Br />";
+					w++; 
+				}while(w<160); 
+				
+				
+			};
+		</script>
+	</head>
+	
+	<body>
+		<p></p><Br />
+		<p></p><Br />
+		<p></p><Br />
+		
+		<button onclick="test1()">Submit</button>
+	</body>
+
+</html>

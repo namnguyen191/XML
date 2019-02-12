@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script>
+         function loadXMLDoc(filename) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET",filename,false);
+            xhttp.send();
+            return xhttp.responseXML;
+         }
+      </script>
+   </head>
+   <body>
+      <script>
+         xmlDoc = loadXMLDoc("singer.xml");
+
+         document.write("<b>Before remove operation, total ContactNo elements: </b>");
+         document.write(xmlDoc.getElementsByTagName("cd").length);
+         document.write("<br>");
+
+         x = xmlDoc.getElementsByTagName("cd")[0];
+         x.parentNode.removeChild(x);
+
+         document.write("<b>After remove operation, total ContactNo elements: </b>");
+         document.write(xmlDoc.getElementsByTagName("cd").length);
+      </script>
+   </body>
+</html>

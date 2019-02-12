@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NEWSPAPER [
+
+<!ELEMENT NEWSPAPER (ARTICLE+)>
+<!ELEMENT ARTICLE (HEADLINE,BYLINE,LEAD,BODY,NOTES)>
+<!ELEMENT HEADLINE (#PCDATA)>
+<!ELEMENT BYLINE (#PCDATA)>
+<!ELEMENT LEAD (#PCDATA)>
+<!ELEMENT BODY (#PCDATA)>
+<!ELEMENT NOTES (#PCDATA)>
+
+<!ATTLIST ARTICLE id ID #REQUIRED>
+<!ATTLIST ARTICLE AUTHOR CDATA #REQUIRED>
+<!ATTLIST ARTICLE EDITOR CDATA #IMPLIED>
+<!ATTLIST ARTICLE DATE CDATA #IMPLIED>
+<!ATTLIST ARTICLE EDITION CDATA #IMPLIED>
+
+<!ENTITY newspaper "Vervet Logic Times">
+<!ENTITY publisher "Vervet Logic Press">
+<!ENTITY copyright "Copyright 1998 Vervet Logic Press">
+
+]>
+
+<NEWSPAPER>
+	<ARTICLE id="10" author="Nam" Editor="John">
+		<HEADLINE>
+			100 Ways to cook
+		</HEADLINE>
+		<BYLINE>
+			By Nam
+		</BYLINE>
+		<LEAD>
+			So you want to cook
+		</LEAD>
+		<BODY>
+			.... Thank you for reading the &newspaper;
+		</BODY>
+		<NOTE>
+			&copyright; 
+		</NOTE>
+	</ARTICLE>
+	<ARTICLE id="21" author="Jack" Date="5/4/2017">
+		<HEADLINE>
+			Police caught criminal
+		</HEADLINE>
+		<BYLINE>
+			By Jack. Publisher: &publisher;
+		</BYLINE>
+		<LEAD>
+			Last night the police caught someone.
+		</LEAD>
+		<BODY>
+			....
+		</BODY>
+		<NOTE>
+			&copyright;
+		</NOTE>
+	</ARTICLE>
+	<ARTICLE id="13" author="Jack" Edition="1st">
+		<HEADLINE>
+			Car accident
+		</HEADLINE>
+		<BYLINE>
+			By Jack.
+		</BYLINE>
+		<LEAD>
+			A terrible accident happened yesterday
+		</LEAD>
+		<BODY>
+			... 
+		</BODY>
+		<NOTE>
+		&copyright;
+		</NOTE>
+	</ARTICLE>
+	<ARTICLE id="23" author="Doe">
+		<HEADLINE>
+			New scientific discovery
+		</HEADLINE>
+		<BYLINE>
+			By Doe. Published by &publisher;
+		</BYLINE>
+		<LEAD>
+			Scientist from U.S discovered something that will change everyone life
+		</LEAD>
+		<BODY>
+		.... Thank you for reading &newspaper;
+		</BODY>
+		<NOTE>
+			&copyright;
+		</NOTE>
+	</ARTICLE>
+</NEWSPAPER>

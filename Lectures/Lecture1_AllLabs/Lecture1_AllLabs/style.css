@@ -1,0 +1,5 @@
+subs{width:250px; background-color:orange;}
+title{display:block; color:maroon; font-size:36pt; font-weight:bold;}
+desc{display:block; color:maroon; font-size:18pt;}
+sub{ display:block; padding:5px; background-color:yellow; border-bottom: 1px solid maroon; font-size:12pt; font-family: monospace;}
+plus{display:block; background-color:maroon; color:white; padding:5px; font-size:12pt;  font-weight:bold; font-family: monospace;}

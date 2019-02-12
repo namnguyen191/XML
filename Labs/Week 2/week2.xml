@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <?xml-stylesheet type="text/css" href="style.css" ?> -->
+<coffee>
+	<!-- italian origin. -->
+	<it>Caffe&#0232; e latte</it>
+	<!-- Literal English translation -->
+	<en>Coffee &#038; Milk</en>
+	<!-- Familiar English term. -->
+	<fam>Latte</fam>
+</coffee>
